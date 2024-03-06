@@ -22,3 +22,8 @@ type SetUserEmailVerifiedRequest struct {
 type UserForgetPassRequest struct {
 	Email string `json:"email" binding:"required"`
 }
+
+type UserResetPassRequest struct {
+	Email       string `json:"email" binding:"required"`
+	Newpassword string `json:"newpassword" binding:"required"`
+}
