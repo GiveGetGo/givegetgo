@@ -12,6 +12,7 @@ const (
 	SuccessCode      = "20000"
 	LoginSuccessCode = "20001"
 	ForgotPassCode   = "20002"
+	ResetPassCode    = "20003"
 
 	// 201
 	UserCreatedCode   = "20101"
@@ -28,6 +29,7 @@ const (
 	InvalidCredentialsCode  = "40101"
 	InvalidVerificationCode = "40102"
 	EmailNotVerifiedCode    = "40103"
+	InvalidSessionCode      = "40104"
 
 	// 404
 	UserNotFoundCode = "40401"
@@ -52,6 +54,22 @@ func LoginSuccess() Response {
 	return Response{
 		Code: LoginSuccessCode,
 		Msg:  "Login successful",
+	}
+}
+
+// func ForgotPass() Response
+func ForgotPass() Response {
+	return Response{
+		Code: ForgotPassCode,
+		Msg:  "Password reset email sent",
+	}
+}
+
+// func PassReset() Response
+func ResetPass() Response {
+	return Response{
+		Code: ResetPassCode,
+		Msg:  "Password reset",
 	}
 }
 
@@ -124,6 +142,14 @@ func EmailNotVerified() Response {
 	return Response{
 		Code: EmailNotVerifiedCode,
 		Msg:  "Email not verified",
+	}
+}
+
+// func InvalidSession() Response
+func InvalidSession() Response {
+	return Response{
+		Code: InvalidSessionCode,
+		Msg:  "Invalid session",
 	}
 }
 
