@@ -2,9 +2,10 @@ package types
 
 // RegisterRequest - request body for the register endpoint
 type RegisterRequest struct {
-	UserName string `json:"username" binding:"required"`
 	Email    string `json:"email" binding:"required"`
 	Password string `json:"password" binding:"required"`
+	Class string `json:"class" binding:"required"`
+	Major string `json:"major" binding:"required"`
 }
 
 // LoginRequest - request body for the login endpoint
