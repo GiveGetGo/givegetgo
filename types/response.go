@@ -18,6 +18,7 @@ const (
 	UserCreatedCode   = "20101"
 	EmailVerifiedCode = "20102"
 	MFAVerifiedCode   = "20103"
+	PostCreatedCode   = "20102"
 
 	// 400
 	InvalidRequestCode  = "40001"
@@ -78,6 +79,14 @@ func UserCreated() Response {
 	return Response{
 		Code: UserCreatedCode,
 		Msg:  "User created, please verify your email",
+	}
+}
+
+// func PostCreated() Response
+func PostCreated() Response {
+	return Response{
+		Code: PostCreatedCode,
+		Msg:  "Post created successfully",
 	}
 }
 

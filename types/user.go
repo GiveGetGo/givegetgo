@@ -10,7 +10,7 @@ type RegisterRequest struct {
 
 // LoginRequest - request body for the login endpoint
 type LoginRequest struct {
-	Email    string `json:"email" binding:"required"`
+	Email    string `json:"email" binding:r"required"`
 	Password string `json:"password" binding:"required"`
 }
 
@@ -27,4 +27,13 @@ type UserForgetPassRequest struct {
 type UserResetPassRequest struct {
 	Email       string `json:"email" binding:"required"`
 	Newpassword string `json:"newpassword" binding:"required"`
+}
+
+//PostRequest - request body for the post endpoint
+type PostRequest struct {
+	//thinking UserID may not be neccessary when request a user to post something
+	UserID      int64  `json:"userID" binding:"required"`
+	Title       string `json:"title" binding:"required"`
+	Description string `json:"description" binding:"required"`
+	Category    string `json:"category" binding:"required"`
 }
