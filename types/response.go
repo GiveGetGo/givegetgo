@@ -18,7 +18,7 @@ const (
 	UserCreatedCode   = "20101"
 	EmailVerifiedCode = "20102"
 	MFAVerifiedCode   = "20103"
-	PostCreatedCode   = "20102"
+	PostCreatedCode   = "20104"
 
 	// 400
 	InvalidRequestCode  = "40001"
