@@ -1,10 +1,20 @@
 package types
 
-import "github.com/gin-gonic/gin"
-
 type Response struct {
 	Code string `json:"code"`
 	Msg  string `json:"msg"`
+}
+
+type FullResponse struct {
+	Event string `json:"event"`
+	Code  string `json:"code"`
+	ID    uint   `json:"id"`
+	Msg   string `json:"msg"`
+}
+
+type FullResponseWithData struct {
+	FullResponse
+	Data interface{} `json:"data"`
 }
 
 const (
@@ -13,6 +23,7 @@ const (
 	LoginSuccessCode = "20001"
 	ForgotPassCode   = "20002"
 	ResetPassCode    = "20003"
+	MatchSucessCode  = "20004"
 
 	// 201
 	UserCreatedCode   = "20101"
@@ -71,6 +82,14 @@ func ResetPass() Response {
 	return Response{
 		Code: ResetPassCode,
 		Msg:  "Password reset",
+	}
+}
+
+// func MatchSuccess() Response
+func MatchSuccess() Response {
+	return Response{
+		Code: MatchSucessCode,
+		Msg:  "Match success",
 	}
 }
 
@@ -184,22 +203,4 @@ func InternalServerError() Response {
 		Code: InternalServerErrorCode,
 		Msg:  "Internal server error",
 	}
-}
-
-// func ResponseSuccess()
-func ResponseSuccess(c *gin.Context, status int, event string, userid uint, response Response) {
-	c.JSON(status, gin.H{
-		"event": event,
-		"code":  response.Code,
-		"id":    userid,
-		"msg":   response.Msg,
-	})
-}
-
-// func ResponseError()
-func ResponseError(c *gin.Context, status int, response Response) {
-	c.JSON(status, gin.H{
-		"code": response.Code,
-		"msg":  response.Msg,
-	})
 }
