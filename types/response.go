@@ -44,7 +44,8 @@ const (
 	InvalidSessionCode      = "40104"
 
 	// 404
-	UserNotFoundCode = "40401"
+	RecordNotFoundCode = "40401"
+	UserNotFoundCode   = "40402"
 
 	// 429
 	TooManyRequestsCode = "42901"
@@ -186,6 +187,14 @@ func InvalidEmail() Response {
 	return Response{
 		Code: InvalidEmailCode,
 		Msg:  "Invalid email",
+	}
+}
+
+// func RecordNotFound() Response
+func RecordNotFound() Response {
+	return Response{
+		Code: RecordNotFoundCode,
+		Msg:  "Record not found",
 	}
 }
 
