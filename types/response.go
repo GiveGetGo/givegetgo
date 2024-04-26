@@ -8,7 +8,6 @@ type Response struct {
 type FullResponse struct {
 	Event string `json:"event"`
 	Code  string `json:"code"`
-	ID    uint   `json:"id"`
 	Msg   string `json:"msg"`
 }
 
