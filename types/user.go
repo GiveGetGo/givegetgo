@@ -30,7 +30,7 @@ type UserResetPassRequest struct {
 }
 
 type UserInfoResponse struct {
-	UserID        string `json:"userID"`
+	UserID        uint   `json:"userID"`
 	Username      string `json:"username"`
 	Email         string `json:"email"`
 	Class         string `json:"class"`
