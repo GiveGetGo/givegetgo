@@ -29,6 +29,13 @@ type UserResetPassRequest struct {
 	Newpassword string `json:"newpassword" binding:"required"`
 }
 
+type UserUpdateRequest struct {
+	Username    string `json:"username"`
+	Class       string `json:"class"`
+	Major       string `json:"major"`
+	ProfileInfo string `json:"profileInfo"`
+}
+
 type UserInfoResponse struct {
 	UserID        uint   `json:"userID"`
 	Username      string `json:"username"`
