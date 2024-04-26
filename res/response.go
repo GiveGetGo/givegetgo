@@ -11,7 +11,6 @@ func ResponseSuccessWithData(c *gin.Context, status int, event string, userid ui
 		FullResponse: types.FullResponse{
 			Event: event,
 			Code:  response.Code,
-			ID:    userid,
 			Msg:   response.Msg,
 		},
 		Data: data,
@@ -23,7 +22,6 @@ func ResponseSuccess(c *gin.Context, status int, event string, userid uint, resp
 	c.JSON(status, types.FullResponse{
 		Event: event,
 		Code:  response.Code,
-		ID:    userid,
 		Msg:   response.Msg,
 	})
 }
