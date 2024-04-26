@@ -6,7 +6,7 @@ import (
 )
 
 // func ResponseSuccessWithData()
-func ResponseSuccessWithData(c *gin.Context, status int, event string, userid uint, response types.Response, data interface{}) {
+func ResponseSuccessWithData(c *gin.Context, status int, event string, response types.Response, data interface{}) {
 	c.JSON(status, types.FullResponseWithData{
 		FullResponse: types.FullResponse{
 			Event: event,
@@ -18,7 +18,7 @@ func ResponseSuccessWithData(c *gin.Context, status int, event string, userid ui
 }
 
 // func ResponseSuccess()
-func ResponseSuccess(c *gin.Context, status int, event string, userid uint, response types.Response) {
+func ResponseSuccess(c *gin.Context, status int, event string, response types.Response) {
 	c.JSON(status, types.FullResponse{
 		Event: event,
 		Code:  response.Code,
