@@ -28,3 +28,13 @@ type UserResetPassRequest struct {
 	Email       string `json:"email" binding:"required"`
 	Newpassword string `json:"newpassword" binding:"required"`
 }
+
+type UserInfoResponse struct {
+	UserID        string `json:"userID"`
+	Username      string `json:"username"`
+	Email         string `json:"email"`
+	Class         string `json:"class"`
+	Major         string `json:"major"`
+	EmailVerified bool   `json:"email_verified"`
+	MfaVerified   bool   `json:"mfa_verified"`
+}
