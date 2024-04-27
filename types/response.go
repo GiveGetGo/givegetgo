@@ -47,6 +47,9 @@ const (
 	RecordNotFoundCode = "40401"
 	UserNotFoundCode   = "40402"
 
+	// 409
+	VerificationCodeExistsCode = "40901"
+
 	// 429
 	TooManyRequestsCode = "42901"
 
@@ -211,6 +214,22 @@ func UserNotFound() Response {
 	return Response{
 		Code: UserNotFoundCode,
 		Msg:  "User not found",
+	}
+}
+
+// func VerificationCodeExists Response
+func VerificationCodeExists() Response {
+	return Response{
+		Code: VerificationCodeExistsCode,
+		Msg:  "Verification code exists",
+	}
+}
+
+// func TooManyRequest() Respons
+func TooManyRequest() Response {
+	return Response{
+		Code: TooManyRequestsCode,
+		Msg:  "Too many request",
 	}
 }
 
