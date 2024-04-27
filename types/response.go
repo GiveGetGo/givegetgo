@@ -25,10 +25,11 @@ const (
 	MatchSucessCode  = "20004"
 
 	// 201
-	UserCreatedCode   = "20101"
-	EmailVerifiedCode = "20102"
-	MFAVerifiedCode   = "20103"
-	PostCreatedCode   = "20104"
+	UserCreatedCode         = "20101"
+	EmailVerifiedCode       = "20102"
+	MFAVerifiedCode         = "20103"
+	PostCreatedCode         = "20104"
+	NotificationCreatedCode = "20105"
 
 	// 400
 	InvalidRequestCode  = "40001"
@@ -106,6 +107,14 @@ func PostCreated() Response {
 	return Response{
 		Code: PostCreatedCode,
 		Msg:  "Post created successfully",
+	}
+}
+
+// func NotificationCreated() Response
+func NotificationCreated() Response {
+	return Response{
+		Code: NotificationCreatedCode,
+		Msg:  "Notification created successfully",
 	}
 }
 
