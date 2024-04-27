@@ -3,7 +3,6 @@ package types
 // GetEmailVerificationRequest
 type GetEmailVerificationRequest struct {
 	Event    string `json:"event" binding:"required"`
-	UserID   uint   `json:"userID" binding:"required"`
 	UserName string `json:"username" binding:"required"`
 	Email    string `json:"email" binding:"required"`
 }
@@ -11,7 +10,6 @@ type GetEmailVerificationRequest struct {
 // EmailVerifyRequest
 type EmailVerifyRequest struct {
 	Event            string `json:"event" binding:"required"`
-	UserID           uint   `json:"userID" binding:"required"`
 	Email            string `json:"email" binding:"required"`
 	VerificationCode string `json:"verification_code" binding:"required"`
 }
