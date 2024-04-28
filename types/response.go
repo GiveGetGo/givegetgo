@@ -30,6 +30,7 @@ const (
 	MFAVerifiedCode         = "20103"
 	PostCreatedCode         = "20104"
 	NotificationCreatedCode = "20105"
+	BidCreatedCode          = "20106"
 
 	// 400
 	InvalidRequestCode  = "40001"
@@ -110,6 +111,14 @@ func PostCreated() Response {
 	return Response{
 		Code: PostCreatedCode,
 		Msg:  "Post created successfully",
+	}
+}
+
+// func BidCreated() Response
+func BidCreated() Response {
+	return Response{
+		Code: BidCreatedCode,
+		Msg:  "Bid placed successfully",
 	}
 }
 
