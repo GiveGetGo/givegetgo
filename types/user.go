@@ -30,10 +30,11 @@ type UserResetPassRequest struct {
 }
 
 type UserUpdateRequest struct {
-	Username    string `json:"username"`
-	Class       string `json:"class"`
-	Major       string `json:"major"`
-	ProfileInfo string `json:"profileInfo"`
+	Username     string `json:"username"`
+	Class        string `json:"class"`
+	Major        string `json:"major"`
+	ProfileImage string `json:"profile_image"`
+	ProfileInfo  string `json:"profile_info"`
 }
 
 type UserInfoResponse struct {
@@ -42,6 +43,7 @@ type UserInfoResponse struct {
 	Email         string `json:"email"`
 	Class         string `json:"class"`
 	Major         string `json:"major"`
+	ProfileImage  string `json:"profile_image"`
 	EmailVerified bool   `json:"email_verified"`
 	MfaVerified   bool   `json:"mfa_verified"`
 }
