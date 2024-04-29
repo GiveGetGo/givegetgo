@@ -44,6 +44,7 @@ type UserInfoResponse struct {
 	Class         string `json:"class"`
 	Major         string `json:"major"`
 	ProfileImage  string `json:"profile_image"`
+	ProfileInfo   string `json:"profile_info"`
 	EmailVerified bool   `json:"email_verified"`
 	MfaVerified   bool   `json:"mfa_verified"`
 }
