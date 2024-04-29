@@ -43,6 +43,7 @@ const (
 	InvalidVerificationCode = "40102"
 	EmailNotVerifiedCode    = "40103"
 	InvalidSessionCode      = "40104"
+	MFANotVerifiedCode      = "40105"
 
 	// 404
 	RecordNotFoundCode = "40401"
@@ -199,6 +200,14 @@ func InvalidSession() Response {
 	return Response{
 		Code: InvalidSessionCode,
 		Msg:  "Invalid session",
+	}
+}
+
+// func MFANotVerified() Response
+func MFANotVerified() Response {
+	return Response{
+		Code: MFANotVerifiedCode,
+		Msg:  "MFA not verified",
 	}
 }
 
