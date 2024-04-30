@@ -4,3 +4,7 @@ package types
 type BidRequest struct {
 	Description string `json:"description" binding:"required"`
 }
+
+type BidUpdateRequest struct {
+	Description *string `json:"description,omitempty"`
+}
